@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Madhav S Anoop | Aerospace Portfolio</title>
+    
+    <!-- Google Fonts: Inter for the modern Framer aesthetic -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        bg: '#F7F7F7',
+                        card: '#FFFFFF',
+                        border: '#E5E5E5',
+                        primary: '#111111',
+                        muted: '#737373',
+                        accent: '#2563EB', // A subtle tech blue
+                    },
+                    boxShadow: {
+                        'framer': '0 4px 20px rgba(0, 0, 0, 0.03)',
+                        'framer-hover': '0 10px 40px rgba(0, 0, 0, 0.08)',
+                        'glass': '0 4px 30px rgba(0, 0, 0, 0.1)',
+                    },
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <style>
+        body {
+            background-color: #F7F7F7;
+            color: #111111;
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        /* Hide scrollbar for cleaner look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #d1d5db;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #9ca3af;
+        }
+
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+    </style>
+</head>
+<body class="relative pb-32">
+
+    <!-- Floating Pill Navigation -->
+    <nav class="fixed bottom-6 left-1/2 -translate-x-1/2 glass-nav border border-border px-2 py-2 rounded-full z-50 shadow-glass flex items-center gap-2 sm:gap-4 transition-all">
+        <a href="#home" class="px-4 py-2 rounded-full text-sm font-medium hover:bg-black/5 transition-colors">Home</a>
+        <a href="#research" class="px-4 py-2 rounded-full text-sm font-medium hover:bg-black/5 transition-colors">Research</a>
+        <a href="#experience" class="px-4 py-2 rounded-full text-sm font-medium hover:bg-black/5 transition-colors">Experience</a>
+        <a href="#honors" class="px-4 py-2 rounded-full text-sm font-medium hover:bg-black/5 transition-colors">Honors</a>
+    </nav>
+
+    <main class="max-w-[1100px] mx-auto px-6 pt-24 md:pt-32 space-y-32">
+
+        <!-- ================= HERO SECTION ================= -->
+        <section id="home" class="animate-fade-in-up">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-border text-xs font-semibold uppercase tracking-wider text-muted mb-8">
+                <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span> Aiming for the Moon & Mars
+            </div>
+            
+            <h1 class="text-5xl md:text-7xl font-bold tracking-tighter text-primary mb-6 leading-[1.1]">
+                Hi, I'm Madhav Anoop.<br>
+                <span class="text-gray-400">Aerospace Engineer.</span>
+            </h1>
+            
+            <p class="text-lg md:text-xl text-muted max-w-2xl leading-relaxed mb-16">
+                Advancing humanity’s future through biomimicry, computational fluid dynamics, and space innovation. Designing the next generation of highly efficient flight architecture.
+            </p>
+
+            <!-- ================= "AT A GLANCE" BENTO GRID ================= -->
+            <!-- Highly scannable for admission officers -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                
+                <!-- Highlight 1: Research (Spans 2 columns) -->
+                <a href="#research" class="md:col-span-2 group bg-card rounded-[2rem] p-8 border border-border shadow-framer hover:shadow-framer-hover hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between overflow-hidden relative">
+                    <!-- Subtle background decoration -->
+                    <div class="absolute -right-10 -top-10 w-40 h-40 bg-accent/5 rounded-full blur-2xl group-hover:bg-accent/10 transition-colors"></div>
+                    
+                    <div class="relative z-10">
+                        <div class="w-12 h-12 bg-primary text-white rounded-2xl flex items-center justify-center mb-6">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"></path></svg>
+                        </div>
+                        <h3 class="text-2xl font-bold tracking-tight mb-3">Biomimetic UAV Research</h3>
+                        <p class="text-muted leading-relaxed max-w-md mb-6">
+                            3-year independent study adapting humpback whale tubercles to aircraft wings. Proved a <strong class="text-primary">+47% L/D ratio</strong> in CFD and achieved a <strong class="text-primary">+12% flight range</strong> via custom fabricated UAVs.
+                        </p>
+                    </div>
+                    <div class="relative z-10 flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-black/5 text-primary text-xs font-semibold rounded-full">Published Author</span>
+                        <span class="px-3 py-1 bg-black/5 text-primary text-xs font-semibold rounded-full">2x Sci-Fair 1st Place</span>
+                    </div>
+                </a>
+
+                <!-- Highlight 2: DI (Spans 1 column) -->
+                <div class="md:col-span-1 group bg-card rounded-[2rem] p-8 border border-border shadow-framer hover:shadow-framer-hover hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 bg-purple-100 text-purple-600 rounded-2xl flex items-center justify-center mb-6">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-bold tracking-tight mb-3">Destination Imagination</h3>
+                        <p class="text-muted leading-relaxed mb-6">
+                            Competed in rigorous STEAM and fine arts challenges demanding complex engineering and collaboration.
+                        </p>
+                    </div>
+                    <div class="mt-auto">
+                        <span class="inline-block px-3 py-1 bg-amber-100 text-amber-800 text-xs font-bold rounded-full mb-2">2x Global 1st Place</span><br>
+                        <span class="text-xs text-muted font-medium">DaVinci & Renaissance Awards</span>
+                    </div>
+                </div>
+
+                <!-- Highlight 3: Toolkit (Spans 1 column) -->
+                <div class="md:col-span-1 group bg-card rounded-[2rem] p-8 border border-border shadow-framer hover:shadow-framer-hover hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center mb-6">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path></svg>
+                        </div>
+                        <h3 class="text-xl font-bold tracking-tight mb-3">Aerodynamic Toolkit</h3>
+                        <p class="text-muted leading-relaxed mb-6">
+                            Developed & deployed an open-source educational software toolkit to screen aerodynamics, piloted with local robotics teams.
+                        </p>
+                    </div>
+                    <div class="mt-auto">
+                        <span class="inline-block px-3 py-1 bg-blue-50 text-blue-700 text-xs font-bold rounded-full">Software & Education</span>
+                    </div>
+                </div>
+
+                <!-- Highlight 4: NASA (Spans 2 columns) -->
+                <div class="md:col-span-2 group bg-primary text-white rounded-[2rem] p-8 border border-primary shadow-framer hover:shadow-framer-hover hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between relative overflow-hidden">
+                    <div class="absolute right-0 bottom-0 opacity-10 pointer-events-none">
+                        <svg width="200" height="200" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+                    </div>
+                    <div class="relative z-10">
+                        <p class="text-gray-400 font-semibold tracking-wider text-xs uppercase mb-2">High School Aerospace Scholars</p>
+                        <h3 class="text-2xl font-bold tracking-tight mb-3">NASA Moonshot Team Lead</h3>
+                        <p class="text-gray-300 leading-relaxed max-w-md">
+                            Selected for a rigorous year-long NASA program. Led the Echo team to design a comprehensive human mission architecture to the Moon, presenting directly to a panel of NASA engineers.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ================= DEEP DIVE: RESEARCH ================= -->
+        <section id="research" class="animate-fade-in-up" style="animation-delay: 0.2s;">
+            <div class="mb-12">
+                <h2 class="text-3xl font-bold tracking-tight text-primary mb-4">Independent Research</h2>
+                <p class="text-lg text-muted max-w-2xl">A deep dive into my 3-year study on optimizing aerodynamic efficiency through biomimicry.</p>
+            </div>
+
+            <div class="bg-card rounded-[2rem] border border-border overflow-hidden shadow-framer">
+                <div class="p-8 md:p-12 border-b border-border">
+                    <p class="text-accent font-semibold tracking-wider text-xs uppercase mb-2">IRCC '26 Presentation</p>
+                    <h3 class="text-3xl md:text-4xl font-bold tracking-tight mb-6">Prototyping & Flight Testing Biomimetic Wings</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-muted">
+                        <div>
+                            <strong class="text-primary block mb-2">The Problem</strong>
+                            Aviation generates 1B tons of carbon annually. With demand projecting a 110% rise by 2050, innovative fuel efficiency solutions are critical to combat global warming.
+                        </div>
+                        <div>
+                            <strong class="text-primary block mb-2">The Hypothesis</strong>
+                            Implementing humpback whale flipper tubercles or slotted eagle primary feathers into aerofoil designs minimizes drag, thereby increasing lift-to-drag (L/D) ratios and fuel efficiency.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-border">
+                    <!-- Phase 1 -->
+                    <div class="p-8 md:p-12 hover:bg-black/[0.01] transition-colors">
+                        <div class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-primary font-bold mb-6">1</div>
+                        <h4 class="text-xl font-bold mb-4">3D Modeling & CFD Analysis</h4>
+                        <p class="text-muted mb-6">Designed 10-inch half-wing models and conducted 204 CFD simulations across 15,000 trials (50-240 m/s). Built a custom wind tunnel with 280 PVC pipes for empirical laminar flow validation.</p>
+                        <div class="bg-bg p-4 rounded-xl border border-border">
+                            <span class="block text-sm text-muted mb-1">Peak Performance Data</span>
+                            <strong class="text-2xl text-primary">+47% L/D Ratio</strong>
+                            <span class="text-sm text-muted ml-2">@ 50 m/s, 5° AoA</span>
+                        </div>
+                    </div>
+
+                    <!-- Phase 2 -->
+                    <div class="p-8 md:p-12 hover:bg-black/[0.01] transition-colors">
+                        <div class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-primary font-bold mb-6">2</div>
+                        <h4 class="text-xl font-bold mb-4">UAV Fabrication & Flight Test</h4>
+                        <p class="text-muted mb-6">Scaled to a 40.5-inch full wingspan and fabricated custom aircraft platforms. Programmed an onboard data logger to track telemetry during rigorous field tests at ~10 m/s.</p>
+                        <div class="bg-bg p-4 rounded-xl border border-border">
+                            <span class="block text-sm text-muted mb-1">Field Results (Distance/Volt)</span>
+                            <strong class="text-2xl text-primary">+12% Flight Range</strong>
+                            <span class="text-sm text-muted ml-2">1802 m/v vs 1596 m/v</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Other Projects Row -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+                <div class="bg-card rounded-3xl p-8 border border-border shadow-framer">
+                    <h4 class="text-lg font-bold mb-2">Ion vs. Chemical Propulsion Study</h4>
+                    <p class="text-muted text-sm leading-relaxed">Conducted a comparative study evaluating propulsion systems in modern spacecraft. Analyzed specific limitations, thrust-to-weight ratios, and long-term deep space benefits of each methodology.</p>
+                </div>
+                <div class="bg-card rounded-3xl p-8 border border-border shadow-framer flex items-center justify-between">
+                    <div>
+                        <h4 class="text-lg font-bold mb-1">Published Research Paper</h4>
+                        <p class="text-muted text-sm">Under peer-review for JEI publication.</p>
+                    </div>
+                    <span class="text-xs font-mono bg-gray-100 px-2 py-1 rounded">DOI: 10.69831/157f400f46</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= EXPERIENCE & EDUCATION ================= -->
+        <section id="experience" class="animate-fade-in-up" style="animation-delay: 0.3s;">
+            <div class="mb-12">
+                <h2 class="text-3xl font-bold tracking-tight text-primary mb-4">Experience & Education</h2>
+                <p class="text-lg text-muted max-w-2xl">My academic journey and practical engineering collaborations.</p>
+            </div>
+
+            <div class="bg-card rounded-[2rem] border border-border p-8 md:p-12 shadow-framer">
+                <div class="space-y-12">
+                    
+                    <!-- Item 1 -->
+                    <div class="flex flex-col md:flex-row gap-4 md:gap-12">
+                        <div class="md:w-1/4 flex-shrink-0">
+                            <span class="text-sm font-semibold text-muted">June 2026</span>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-primary">Conference Presenter</h3>
+                            <p class="text-accent font-medium mb-3">International Research Conference for Children (IRCC '26)</p>
+                            <p class="text-muted leading-relaxed">Presented independent biomimicry research to an international audience. Shared comprehensive empirical data from wind tunnel tests, CFD simulations, and physical UAV flights demonstrating applications for commercial drone fleets.</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="flex flex-col md:flex-row gap-4 md:gap-12">
+                        <div class="md:w-1/4 flex-shrink-0">
+                            <span class="text-sm font-semibold text-muted">2024 - 2025</span>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-primary">Research Collaboration</h3>
+                            <p class="text-accent font-medium mb-3">Vertical Flight Lab, UT Austin</p>
+                            <p class="text-muted leading-relaxed">Expanded practical experience by collaborating with researchers in the Aerospace Engineering Department. Gained exposure to university-level research methodologies, advanced aerodynamics, and rigorous academic testing.</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="flex flex-col md:flex-row gap-4 md:gap-12">
+                        <div class="md:w-1/4 flex-shrink-0">
+                            <span class="text-sm font-semibold text-muted">2023 - 2024</span>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-primary">University-Level Coursework</h3>
+                            <p class="text-accent font-medium mb-3">Stanford Pre-Collegiate Mathematics</p>
+                            <p class="text-muted leading-relaxed">Successfully completed highly rigorous university-level mathematics courses, including Number Theory and Linear Algebra. Earned Stanford Continuing Studies Credit.</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 4 -->
+                    <div class="flex flex-col md:flex-row gap-4 md:gap-12">
+                        <div class="md:w-1/4 flex-shrink-0">
+                            <span class="text-sm font-semibold text-muted">Summer 2022</span>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-primary">Simulated Flight Director</h3>
+                            <p class="text-accent font-medium mb-3">U.S. Space & Rocket Center</p>
+                            <p class="text-muted leading-relaxed">Immersive 40-hour/week STEM experience. Directed simulated space missions, managing high-pressure scenarios and leading a team through complex operational protocols requiring rapid decision-making.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= HONORS & AWARDS ================= -->
+        <section id="honors" class="animate-fade-in-up" style="animation-delay: 0.4s;">
+            <div class="mb-12">
+                <h2 class="text-3xl font-bold tracking-tight text-primary mb-4">Awards & Honors</h2>
+                <p class="text-lg text-muted">Recognized for academic excellence and engineering design.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Award -->
+                <div class="bg-card rounded-3xl p-8 border border-border shadow-framer hover:shadow-framer-hover hover:-translate-y-1 transition-all duration-300">
+                    <p class="text-sm text-muted mb-2">August 2026</p>
+                    <h3 class="text-xl font-bold text-primary mb-2">National Merit Scholarship Semifinalist</h3>
+                    <p class="text-sm text-muted">Recognized for outstanding academic achievement based on a qualifying NMSQT index score of 226.</p>
+                </div>
+                <!-- Award -->
+                <div class="bg-card rounded-3xl p-8 border border-border shadow-framer hover:shadow-framer-hover hover:-translate-y-1 transition-all duration-300">
+                    <p class="text-sm text-muted mb-2">2025 & 2026</p>
+                    <h3 class="text-xl font-bold text-primary mb-2">Top Science & Engineering Fair Awards</h3>
+                    <p class="text-sm text-muted">2x 1st Place at Greater Austin Regional, $2500 SpaceX Scholarship at Texas State Science Fair, US Air Force Award, and $3000 Smith & Dawson Award.</p>
+                </div>
+                <!-- Award -->
+                <div class="bg-card rounded-3xl p-8 border border-border shadow-framer hover:shadow-framer-hover hover:-translate-y-1 transition-all duration-300">
+                    <p class="text-sm text-muted mb-2">May 2024 & 2025</p>
+                    <h3 class="text-xl font-bold text-primary mb-2">Destination Imagination Global Winner</h3>
+                    <p class="text-sm text-muted">2x 1st Place winner at the International STEAM competition. Recipient of the DaVinci and Renaissance Special Awards.</p>
+                </div>
+                <!-- Award -->
+                <div class="bg-card rounded-3xl p-8 border border-border shadow-framer hover:shadow-framer-hover hover:-translate-y-1 transition-all duration-300">
+                    <p class="text-sm text-muted mb-2">June 2026</p>
+                    <h3 class="text-xl font-bold text-primary mb-2">Best Research Presentation</h3>
+                    <p class="text-sm text-muted">Awarded at the International Research Conference for Children (IRCC) for independent research on Biomimicry.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="max-w-[1100px] mx-auto px-6 mt-32 mb-16 text-center md:text-left flex flex-col md:flex-row justify-between items-center text-muted text-sm">
+        <p>&copy; <script>document.write(new Date().getFullYear())</script> Madhav S. Anoop. Aerospace Portfolio.</p>
+        <div class="flex gap-6 mt-4 md:mt-0">
+            <a href="#" class="hover:text-primary transition-colors font-medium">Email</a>
+            <a href="#" class="hover:text-primary transition-colors font-medium">LinkedIn</a>
+            <a href="#" class="hover:text-primary transition-colors font-medium">GitHub</a>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling offset for fixed navigation logic
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
