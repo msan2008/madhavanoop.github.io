@@ -34,11 +34,11 @@
                         'glass': '0 4px 30px rgba(0, 0, 0, 0.1)',
                     },
                     animation: {
-                        'fade-in-up': 'fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+                        'fade-in-up': 'fadeInUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards',
                     },
                     keyframes: {
                         fadeInUp: {
-                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '0%': { opacity: '0', transform: 'translateY(15px)' },
                             '100%': { opacity: '1', transform: 'translateY(0)' },
                         }
                     }
@@ -76,40 +76,38 @@
         }
     </style>
 </head>
-<body class="relative pb-32">
+<body class="relative pb-32 flex flex-col min-h-screen">
 
-    <!-- Floating Pill Navigation -->
-    <nav class="fixed bottom-6 left-1/2 -translate-x-1/2 glass-nav border border-border px-2 py-2 rounded-full z-50 shadow-glass flex items-center gap-2 sm:gap-4 transition-all">
-        <a href="#home" class="px-4 py-2 rounded-full text-sm font-medium hover:bg-black/5 transition-colors">Home</a>
-        <a href="#research" class="px-4 py-2 rounded-full text-sm font-medium hover:bg-black/5 transition-colors">Research</a>
-        <a href="#experience" class="px-4 py-2 rounded-full text-sm font-medium hover:bg-black/5 transition-colors">Experience</a>
-        <a href="#honors" class="px-4 py-2 rounded-full text-sm font-medium hover:bg-black/5 transition-colors">Honors</a>
+    <!-- Floating Pill Navigation (JS Controlled) -->
+    <nav class="fixed top-6 right-6 md:right-10 glass-nav border border-border px-2 py-2 rounded-full z-50 shadow-glass flex items-center gap-1 sm:gap-2 transition-all w-max max-w-[95vw]">
+        <button onclick="navigate('home')" data-target="home" class="nav-btn px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-medium transition-colors bg-black/10 text-primary">Home</button>
+        <button onclick="navigate('research')" data-target="research" class="nav-btn px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-medium transition-colors hover:bg-black/5 text-muted">Research</button>
+        <button onclick="navigate('experience')" data-target="experience" class="nav-btn px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-medium transition-colors hover:bg-black/5 text-muted hidden sm:block">Experience</button>
+        <button onclick="navigate('honors')" data-target="honors" class="nav-btn px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-medium transition-colors hover:bg-black/5 text-muted">Honors</button>
     </nav>
 
-    <main class="max-w-[1100px] mx-auto px-6 pt-24 md:pt-32 space-y-32">
+    <!-- Main Content Container -->
+    <main class="max-w-[1100px] w-full mx-auto px-6 pt-20 md:pt-32 pb-16 flex-grow">
 
-        <!-- ================= HERO SECTION ================= -->
-        <section id="home" class="animate-fade-in-up">
+        <!-- ================= PAGE 1: HOME ================= -->
+        <section id="home" class="page-section animate-fade-in-up">
             <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-border text-xs font-semibold uppercase tracking-wider text-muted mb-8">
                 <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span> Aiming for the Moon & Mars
             </div>
             
             <h1 class="text-5xl md:text-7xl font-bold tracking-tighter text-primary mb-6 leading-[1.1]">
-                Hi, I'm Madhav Anoop.<br>
-                <span class="text-gray-400">Aerospace Engineer.</span>
+                Madhav S Anoop.
             </h1>
             
             <p class="text-lg md:text-xl text-muted max-w-2xl leading-relaxed mb-16">
                 Advancing humanity’s future through biomimicry, computational fluid dynamics, and space innovation. Designing the next generation of highly efficient flight architecture.
             </p>
 
-            <!-- ================= "AT A GLANCE" BENTO GRID ================= -->
-            <!-- Highly scannable for admission officers -->
+            <!-- "AT A GLANCE" BENTO GRID -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                 
-                <!-- Highlight 1: Research (Spans 2 columns) -->
-                <a href="#research" class="md:col-span-2 group bg-card rounded-[2rem] p-8 border border-border shadow-framer hover:shadow-framer-hover hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between overflow-hidden relative">
-                    <!-- Subtle background decoration -->
+                <!-- Highlight 1: Research (Routes to Research Page) -->
+                <a href="#" onclick="navigate('research'); return false;" class="md:col-span-2 group bg-card rounded-[2rem] p-8 border border-border shadow-framer hover:shadow-framer-hover hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between overflow-hidden relative">
                     <div class="absolute -right-10 -top-10 w-40 h-40 bg-accent/5 rounded-full blur-2xl group-hover:bg-accent/10 transition-colors"></div>
                     
                     <div class="relative z-10">
@@ -127,7 +125,7 @@
                     </div>
                 </a>
 
-                <!-- Highlight 2: DI (Spans 1 column) -->
+                <!-- Highlight 2: DI -->
                 <div class="md:col-span-1 group bg-card rounded-[2rem] p-8 border border-border shadow-framer hover:shadow-framer-hover hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
                     <div>
                         <div class="w-12 h-12 bg-purple-100 text-purple-600 rounded-2xl flex items-center justify-center mb-6">
@@ -144,7 +142,7 @@
                     </div>
                 </div>
 
-                <!-- Highlight 3: Toolkit (Spans 1 column) -->
+                <!-- Highlight 3: Toolkit -->
                 <div class="md:col-span-1 group bg-card rounded-[2rem] p-8 border border-border shadow-framer hover:shadow-framer-hover hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
                     <div>
                         <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-2xl flex items-center justify-center mb-6">
@@ -160,8 +158,8 @@
                     </div>
                 </div>
 
-                <!-- Highlight 4: NASA (Spans 2 columns) -->
-                <div class="md:col-span-2 group bg-primary text-white rounded-[2rem] p-8 border border-primary shadow-framer hover:shadow-framer-hover hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between relative overflow-hidden">
+                <!-- Highlight 4: NASA (Routes to Experience Page) -->
+                <a href="#" onclick="navigate('experience'); return false;" class="md:col-span-2 group bg-primary text-white rounded-[2rem] p-8 border border-primary shadow-framer hover:shadow-framer-hover hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between relative overflow-hidden">
                     <div class="absolute right-0 bottom-0 opacity-10 pointer-events-none">
                         <svg width="200" height="200" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
                     </div>
@@ -172,15 +170,14 @@
                             Selected for a rigorous year-long NASA program. Led the Echo team to design a comprehensive human mission architecture to the Moon, presenting directly to a panel of NASA engineers.
                         </p>
                     </div>
-                </div>
-
+                </a>
             </div>
         </section>
 
-        <!-- ================= DEEP DIVE: RESEARCH ================= -->
-        <section id="research" class="animate-fade-in-up" style="animation-delay: 0.2s;">
+        <!-- ================= PAGE 2: RESEARCH ================= -->
+        <section id="research" class="page-section hidden">
             <div class="mb-12">
-                <h2 class="text-3xl font-bold tracking-tight text-primary mb-4">Independent Research</h2>
+                <h2 class="text-4xl md:text-5xl font-bold tracking-tight text-primary mb-4">Independent Research</h2>
                 <p class="text-lg text-muted max-w-2xl">A deep dive into my 3-year study on optimizing aerodynamic efficiency through biomimicry.</p>
             </div>
 
@@ -238,15 +235,15 @@
                         <h4 class="text-lg font-bold mb-1">Published Research Paper</h4>
                         <p class="text-muted text-sm">Under peer-review for JEI publication.</p>
                     </div>
-                    <span class="text-xs font-mono bg-gray-100 px-2 py-1 rounded">DOI: 10.69831/157f400f46</span>
+                    <span class="text-xs font-mono bg-gray-100 px-2 py-1 rounded border border-gray-200">DOI: 10.69831/157f400f46</span>
                 </div>
             </div>
         </section>
 
-        <!-- ================= EXPERIENCE & EDUCATION ================= -->
-        <section id="experience" class="animate-fade-in-up" style="animation-delay: 0.3s;">
+        <!-- ================= PAGE 3: EXPERIENCE ================= -->
+        <section id="experience" class="page-section hidden">
             <div class="mb-12">
-                <h2 class="text-3xl font-bold tracking-tight text-primary mb-4">Experience & Education</h2>
+                <h2 class="text-4xl md:text-5xl font-bold tracking-tight text-primary mb-4">Experience & Education</h2>
                 <p class="text-lg text-muted max-w-2xl">My academic journey and practical engineering collaborations.</p>
             </div>
 
@@ -254,7 +251,7 @@
                 <div class="space-y-12">
                     
                     <!-- Item 1 -->
-                    <div class="flex flex-col md:flex-row gap-4 md:gap-12">
+                    <div class="flex flex-col md:flex-row gap-4 md:gap-12 relative group">
                         <div class="md:w-1/4 flex-shrink-0">
                             <span class="text-sm font-semibold text-muted">June 2026</span>
                         </div>
@@ -266,7 +263,7 @@
                     </div>
 
                     <!-- Item 2 -->
-                    <div class="flex flex-col md:flex-row gap-4 md:gap-12">
+                    <div class="flex flex-col md:flex-row gap-4 md:gap-12 relative group pt-6 border-t border-border/50">
                         <div class="md:w-1/4 flex-shrink-0">
                             <span class="text-sm font-semibold text-muted">2024 - 2025</span>
                         </div>
@@ -278,7 +275,7 @@
                     </div>
 
                     <!-- Item 3 -->
-                    <div class="flex flex-col md:flex-row gap-4 md:gap-12">
+                    <div class="flex flex-col md:flex-row gap-4 md:gap-12 relative group pt-6 border-t border-border/50">
                         <div class="md:w-1/4 flex-shrink-0">
                             <span class="text-sm font-semibold text-muted">2023 - 2024</span>
                         </div>
@@ -290,7 +287,7 @@
                     </div>
 
                     <!-- Item 4 -->
-                    <div class="flex flex-col md:flex-row gap-4 md:gap-12">
+                    <div class="flex flex-col md:flex-row gap-4 md:gap-12 relative group pt-6 border-t border-border/50">
                         <div class="md:w-1/4 flex-shrink-0">
                             <span class="text-sm font-semibold text-muted">Summer 2022</span>
                         </div>
@@ -305,37 +302,37 @@
             </div>
         </section>
 
-        <!-- ================= HONORS & AWARDS ================= -->
-        <section id="honors" class="animate-fade-in-up" style="animation-delay: 0.4s;">
+        <!-- ================= PAGE 4: HONORS ================= -->
+        <section id="honors" class="page-section hidden">
             <div class="mb-12">
-                <h2 class="text-3xl font-bold tracking-tight text-primary mb-4">Awards & Honors</h2>
+                <h2 class="text-4xl md:text-5xl font-bold tracking-tight text-primary mb-4">Awards & Honors</h2>
                 <p class="text-lg text-muted">Recognized for academic excellence and engineering design.</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <!-- Award -->
                 <div class="bg-card rounded-3xl p-8 border border-border shadow-framer hover:shadow-framer-hover hover:-translate-y-1 transition-all duration-300">
-                    <p class="text-sm text-muted mb-2">August 2026</p>
+                    <p class="text-sm text-muted mb-2 font-medium">August 2026</p>
                     <h3 class="text-xl font-bold text-primary mb-2">National Merit Scholarship Semifinalist</h3>
-                    <p class="text-sm text-muted">Recognized for outstanding academic achievement based on a qualifying NMSQT index score of 226.</p>
+                    <p class="text-sm text-muted leading-relaxed">Recognized for outstanding academic achievement based on a qualifying NMSQT index score of 226.</p>
                 </div>
                 <!-- Award -->
                 <div class="bg-card rounded-3xl p-8 border border-border shadow-framer hover:shadow-framer-hover hover:-translate-y-1 transition-all duration-300">
-                    <p class="text-sm text-muted mb-2">2025 & 2026</p>
+                    <p class="text-sm text-muted mb-2 font-medium">2025 & 2026</p>
                     <h3 class="text-xl font-bold text-primary mb-2">Top Science & Engineering Fair Awards</h3>
-                    <p class="text-sm text-muted">2x 1st Place at Greater Austin Regional, $2500 SpaceX Scholarship at Texas State Science Fair, US Air Force Award, and $3000 Smith & Dawson Award.</p>
+                    <p class="text-sm text-muted leading-relaxed">2x 1st Place at Greater Austin Regional, $2500 SpaceX Scholarship at Texas State Science Fair, US Air Force Award, and $3000 Smith & Dawson Award.</p>
                 </div>
                 <!-- Award -->
                 <div class="bg-card rounded-3xl p-8 border border-border shadow-framer hover:shadow-framer-hover hover:-translate-y-1 transition-all duration-300">
-                    <p class="text-sm text-muted mb-2">May 2024 & 2025</p>
+                    <p class="text-sm text-muted mb-2 font-medium">May 2024 & 2025</p>
                     <h3 class="text-xl font-bold text-primary mb-2">Destination Imagination Global Winner</h3>
-                    <p class="text-sm text-muted">2x 1st Place winner at the International STEAM competition. Recipient of the DaVinci and Renaissance Special Awards.</p>
+                    <p class="text-sm text-muted leading-relaxed">2x 1st Place winner at the International STEAM competition. Recipient of the DaVinci and Renaissance Special Awards.</p>
                 </div>
                 <!-- Award -->
                 <div class="bg-card rounded-3xl p-8 border border-border shadow-framer hover:shadow-framer-hover hover:-translate-y-1 transition-all duration-300">
-                    <p class="text-sm text-muted mb-2">June 2026</p>
+                    <p class="text-sm text-muted mb-2 font-medium">June 2026</p>
                     <h3 class="text-xl font-bold text-primary mb-2">Best Research Presentation</h3>
-                    <p class="text-sm text-muted">Awarded at the International Research Conference for Children (IRCC) for independent research on Biomimicry.</p>
+                    <p class="text-sm text-muted leading-relaxed">Awarded at the International Research Conference for Children (IRCC) for independent research on Biomimicry.</p>
                 </div>
             </div>
         </section>
@@ -343,25 +340,53 @@
     </main>
 
     <!-- Footer -->
-    <footer class="max-w-[1100px] mx-auto px-6 mt-32 mb-16 text-center md:text-left flex flex-col md:flex-row justify-between items-center text-muted text-sm">
-        <p>&copy; <script>document.write(new Date().getFullYear())</script> Madhav S. Anoop. Aerospace Portfolio.</p>
-        <div class="flex gap-6 mt-4 md:mt-0">
-            <a href="#" class="hover:text-primary transition-colors font-medium">Email</a>
-            <a href="#" class="hover:text-primary transition-colors font-medium">LinkedIn</a>
-            <a href="#" class="hover:text-primary transition-colors font-medium">GitHub</a>
+    <footer class="w-full mt-auto bg-white border-t border-border">
+        <div class="max-w-[1100px] mx-auto px-6 py-8 text-center md:text-left flex flex-col md:flex-row justify-between items-center text-muted text-sm">
+            <p>&copy; <script>document.write(new Date().getFullYear())</script> Madhav S. Anoop. Aerospace Portfolio.</p>
+            <div class="flex gap-6 mt-4 md:mt-0">
+                <a href="#" class="hover:text-primary transition-colors font-medium">Email</a>
+                <a href="#" class="hover:text-primary transition-colors font-medium">LinkedIn</a>
+                <a href="#" class="hover:text-primary transition-colors font-medium">GitHub</a>
+            </div>
         </div>
     </footer>
 
+    <!-- Single Page App Routing Script -->
     <script>
-        // Smooth scrolling offset for fixed navigation logic
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
+        function navigate(pageId) {
+            // 1. Hide all pages & reset animations
+            const sections = document.querySelectorAll('.page-section');
+            sections.forEach(sec => {
+                sec.classList.add('hidden');
+                sec.classList.remove('animate-fade-in-up');
             });
-        });
+
+            // 2. Show the target page
+            const targetPage = document.getElementById(pageId);
+            if (targetPage) {
+                targetPage.classList.remove('hidden');
+                // Force browser reflow to restart the fade-in animation
+                void targetPage.offsetWidth; 
+                targetPage.classList.add('animate-fade-in-up');
+            }
+
+            // 3. Update active states on the Navigation Menu
+            const navBtns = document.querySelectorAll('.nav-btn');
+            navBtns.forEach(btn => {
+                if (btn.dataset.target === pageId) {
+                    // Active styling
+                    btn.classList.add('bg-black/10', 'text-primary');
+                    btn.classList.remove('hover:bg-black/5', 'text-muted');
+                } else {
+                    // Inactive styling
+                    btn.classList.remove('bg-black/10', 'text-primary');
+                    btn.classList.add('hover:bg-black/5', 'text-muted');
+                }
+            });
+
+            // 4. Scroll smoothly to the top of the page
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
     </script>
 </body>
 </html>
