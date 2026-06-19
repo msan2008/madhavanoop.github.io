@@ -185,14 +185,79 @@
                 <div class="p-8 md:p-12 border-b border-border">
                     <p class="text-accent font-semibold tracking-wider text-xs uppercase mb-2">IRCC '26 Presentation</p>
                     <h3 class="text-3xl md:text-4xl font-bold tracking-tight mb-6">Prototyping & Flight Testing Biomimetic Wings</h3>
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-muted">
-                        <div>
-                            <strong class="text-primary block mb-2">The Problem</strong>
-                            Aviation generates 1B tons of carbon annually. With demand projecting a 110% rise by 2050, innovative fuel efficiency solutions are critical to combat global warming.
+                    
+                    <!-- Project Snapshot Section -->
+                    <div class="p-6 md:p-8 bg-bg rounded-2xl border border-border">
+                        <strong class="text-primary block mb-3 text-lg">Project Snapshot</strong>
+                        <p class="text-muted leading-relaxed text-sm md:text-base mb-6">
+                            With air travel emitting one billion tons of CO2 annually and transportation contributing ~28% of global emissions, developing efficient wing designs to reduce drag is critical for mitigating global warming. This two-phase study evaluated biomimetic wings inspired by eagles and humpback whales. In Phase 1, Computational Fluid Dynamics (CFD) and wind-tunnel testing on 10-inch half-wing models revealed that the whale-mimetic design improved the lift-to-drag ratio by up to 47% at a 5-degree angle of attack and 50 m/s airspeed; the eagle-inspired design showed inconsistent performance. Phase 2 scaled the whale-mimetic design to a 40.5-inch full-wing model. CFD simulations at 10 m/s and a 5-degree angle of attack showed a 12.2% improvement in the lift-to-drag ratio. Subsequent flight testing of a drone prototype demonstrated a 12% increase in flight distance per volt compared to conventional wings. These results suggest that whale-mimetic wings significantly enhance fuel efficiency and represent a promising advancement in reducing the environmental impact of aviation.
+                        </p>
+                        
+                        <!-- Snapshot Sub-Cards -->
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                            <div class="bg-card rounded-xl p-5 border border-border shadow-sm">
+                                <h4 class="font-bold text-primary mb-2 text-sm">Computational Fluid Dynamics (CFD)</h4>
+                                <p class="text-muted text-xs leading-relaxed">
+                                    15,000 Computational Fluid Dynamics (CFD) simulation trials executed at airspeeds of 50 m/s, 100 m/s, and 240 m/s at angles of attack of 0, 5, and 10 degrees.
+                                </p>
+                            </div>
+                            <div class="bg-card rounded-xl p-5 border border-border shadow-sm">
+                                <h4 class="font-bold text-primary mb-2 text-sm">Custom-built Wind-tunnel Testing</h4>
+                                <p class="text-muted text-xs leading-relaxed">
+                                    A wind-tunnel was built and utilized for testing the best-performant whale-mimetic vs conventional aerofoil. Lift produced by the whale-mimetic aerofoil was compared against the lift produced by conventional cambered aerofoils.
+                                </p>
+                            </div>
+                            <div class="bg-card rounded-xl p-5 border border-border shadow-sm">
+                                <h4 class="font-bold text-primary mb-2 text-sm">Flight Testing & Telemetry Data</h4>
+                                <p class="text-muted text-xs leading-relaxed mb-2">
+                                    A commercial drone-sized prototype aircraft with a 40.5-inch wingspan was flown using the 3D printed conventional and whale-mimetic wings. This involved:
+                                </p>
+                                <ul class="text-muted text-xs leading-relaxed list-disc list-inside pl-1 space-y-1">
+                                    <li>Aircraft Fabrication and Assembly</li>
+                                    <li>Circuit Development</li>
+                                    <li>GPS Module Integration</li>
+                                    <li>Data Logger Programming</li>
+                                    <li>Flight testing</li>
+                                </ul>
+                            </div>
                         </div>
-                        <div>
-                            <strong class="text-primary block mb-2">The Hypothesis</strong>
-                            Implementing humpback whale flipper tubercles or slotted eagle primary feathers into aerofoil designs minimizes drag, thereby increasing lift-to-drag (L/D) ratios and fuel efficiency.
+
+                        <!-- Recognition Chips -->
+                        <div class="mt-6 flex flex-wrap gap-2">
+                            <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-accent/10 border border-accent/20 text-accent text-xs font-semibold rounded-full">
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+                                Published Research
+                            </span>
+                            <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-amber-50 border border-amber-200 text-amber-700 text-xs font-semibold rounded-full">
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg>
+                                1st Place Greater Austin Regional Sci & Eng Fair
+                            </span>
+                            <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-amber-50 border border-amber-200 text-amber-700 text-xs font-semibold rounded-full">
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg>
+                                $2500 SpaceX Scholarship (TXSEF)
+                            </span>
+                            <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-amber-50 border border-amber-200 text-amber-700 text-xs font-semibold rounded-full">
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg>
+                                US Air Force Research Lab Award
+                            </span>
+                            <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-amber-50 border border-amber-200 text-amber-700 text-xs font-semibold rounded-full">
+                                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg>
+                                $3000 Smith & Dawson Excellence Award
+                            </span>
+                        </div>
+                    </div>
+
+                    <!-- Problem & Hypothesis Section -->
+                    <div class="mt-8 pt-8 border-t border-border">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 text-muted">
+                            <div>
+                                <strong class="text-primary block mb-2">The Problem</strong>
+                                Aviation generates 1B tons of carbon annually. With demand projecting a 110% rise by 2050, innovative fuel efficiency solutions are critical to combat global warming.
+                            </div>
+                            <div>
+                                <strong class="text-primary block mb-2">The Hypothesis</strong>
+                                Implementing humpback whale flipper tubercles or slotted eagle primary feathers into aerofoil designs minimizes drag, thereby increasing lift-to-drag (L/D) ratios and fuel efficiency.
+                            </div>
                         </div>
                     </div>
 
