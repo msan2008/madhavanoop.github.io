@@ -327,6 +327,65 @@
                             </div>
                         </div>
                     </div>
+
+                    <!-- Result Summary Section -->
+                    <div class="mt-8 pt-8 border-t border-border">
+                        <strong class="text-primary block mb-4">Result Summary</strong>
+                        <div class="flex flex-col gap-8">
+                            
+                            <!-- Summary Table -->
+                            <div class="overflow-x-auto rounded-2xl border border-border shadow-sm">
+                                <table class="w-full text-left text-sm text-muted whitespace-nowrap">
+                                    <thead class="bg-bg text-primary border-b border-border">
+                                        <tr>
+                                            <th class="px-6 py-4 font-bold">Configuration</th>
+                                            <th class="px-6 py-4 font-bold">Scale</th>
+                                            <th class="px-6 py-4 font-bold">Condition</th>
+                                            <th class="px-6 py-4 font-bold">Metric Gain</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="divide-y divide-border bg-white">
+                                        <tr class="hover:bg-black/[0.02] transition-colors">
+                                            <td class="px-6 py-5 font-medium text-primary">CFD Simulation</td>
+                                            <td class="px-6 py-5">10-inch Half Wing</td>
+                                            <td class="px-6 py-5 text-accent font-medium">50 m/s @ 5° AoA</td>
+                                            <td class="px-6 py-5 text-primary font-bold">+47% L/D Ratio</td>
+                                        </tr>
+                                        <tr class="hover:bg-black/[0.02] transition-colors">
+                                            <td class="px-6 py-5 font-medium text-primary">CFD Simulation</td>
+                                            <td class="px-6 py-5">40.5-inch Full Wing</td>
+                                            <td class="px-6 py-5 text-accent font-medium">10 m/s @ 5° AoA</td>
+                                            <td class="px-6 py-5 text-primary font-bold">+12.2% L/D Ratio</td>
+                                        </tr>
+                                        <tr class="hover:bg-black/[0.02] transition-colors">
+                                            <td class="px-6 py-5 font-medium text-primary">Flight Testing</td>
+                                            <td class="px-6 py-5">40.5-inch Wingspan</td>
+                                            <td class="px-6 py-5 text-accent font-medium">10 m/s Avg airspeed</td>
+                                            <td class="px-6 py-5 text-primary font-bold">+12% Meter/Volt</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <!-- Key Bullet Points -->
+                            <div class="bg-bg p-6 rounded-2xl border border-border shadow-sm">
+                                <ul class="space-y-4 text-muted text-sm md:text-base">
+                                    <li class="flex items-start">
+                                        <div class="w-6 h-6 rounded-full bg-green-100 text-green-600 flex items-center justify-center mr-3 mt-0.5 flex-shrink-0">
+                                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                        </div>
+                                        <span class="leading-relaxed">The whale-mimetic wing performed better in all the 3 test scenarios.</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <div class="w-6 h-6 rounded-full bg-green-100 text-green-600 flex items-center justify-center mr-3 mt-0.5 flex-shrink-0">
+                                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                        </div>
+                                        <span class="leading-relaxed">At the same wing size and similar airspeed, the CFD simulation results and the flight test results were comparable.</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-border">
