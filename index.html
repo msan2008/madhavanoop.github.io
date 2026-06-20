@@ -472,49 +472,156 @@
                                     </li>
                                 </ul>
                             </div>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-border">
-                    <!-- Phase 1 -->
-                    <div class="p-8 md:p-12 hover:bg-black/[0.01] transition-colors">
-                        <div class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-primary font-bold mb-6">1</div>
-                        <h4 class="text-xl font-bold mb-4">3D Modeling & CFD Analysis</h4>
-                        <p class="text-muted mb-6">Designed 10-inch half-wing models and conducted 204 CFD simulations across 15,000 trials (50-240 m/s). Built a custom wind tunnel with 280 PVC pipes for empirical laminar flow validation.</p>
-                        <div class="bg-bg p-4 rounded-xl border border-border">
-                            <span class="block text-sm text-muted mb-1">Peak Performance Data</span>
-                            <strong class="text-2xl text-primary">+47% L/D Ratio</strong>
-                            <span class="text-sm text-muted ml-2">@ 50 m/s, 5° AoA</span>
+                            <!-- Findings Section -->
+                            <div class="mt-2">
+                                <strong class="text-primary block mb-3 text-lg">Findings</strong>
+                                <div class="bg-white p-6 rounded-2xl border border-border shadow-sm">
+                                    <ul class="space-y-3 text-muted text-sm md:text-base">
+                                        <li class="flex items-start">
+                                            <svg class="w-5 h-5 text-accent mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                            <span class="leading-relaxed">The whale-mimetic wing had higher lift-to-drag ratio compared to the control and eagle-mimetic wing</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <svg class="w-5 h-5 text-accent mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                            <span class="leading-relaxed">Lift-to-drag ratio gain was most significant at lower airspeeds</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <svg class="w-5 h-5 text-accent mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                            <span class="leading-relaxed">Lift-to-drag gain decreased with larger wing size</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <svg class="w-5 h-5 text-accent mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                            <span class="leading-relaxed">Fuel efficiency gain observed in flight testing is proportional to the CFD lift-to-drag ratio gain</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- Limitations and Mitigations Section -->
+                            <div class="mt-2">
+                                <strong class="text-primary block mb-3 text-lg">Limitations & Mitigations</strong>
+                                <div class="bg-white p-6 rounded-2xl border border-border shadow-sm">
+                                    
+                                    <!-- Limitations Sub-group -->
+                                    <h4 class="font-bold text-xs text-primary uppercase tracking-wider mb-3">Limitations</h4>
+                                    <ul class="space-y-3 text-muted text-sm md:text-base mb-6">
+                                        <li class="flex items-start">
+                                            <svg class="w-5 h-5 text-amber-500 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                            <span class="leading-relaxed">Wind tunnel airspeeds were limited to ~4 m/s, preventing the replication of high-speed flight conditions.</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <svg class="w-5 h-5 text-amber-500 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                            <span class="leading-relaxed">Physical drag could not be measured in the wind tunnel due to instrumentation constraints; only lift was recorded.</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <svg class="w-5 h-5 text-amber-500 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                            <span class="leading-relaxed">Manual pilot control and slight environmental winds introduced natural variability during flight testing.</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <svg class="w-5 h-5 text-amber-500 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                            <span class="leading-relaxed">Statistical analysis could not be conducted on flight test data due to a limited sample size of 20 flights exceeding 100 meters.</span>
+                                        </li>
+                                    </ul>
+
+                                    <!-- Mitigations Sub-group -->
+                                    <h4 class="font-bold text-xs text-primary uppercase tracking-wider mb-3 pt-4 border-t border-border">Mitigations</h4>
+                                    <ul class="space-y-3 text-muted text-sm md:text-base">
+                                        <li class="flex items-start">
+                                            <svg class="w-5 h-5 text-emerald-500 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                            <span class="leading-relaxed">Environmental and pilot variables were significantly mitigated by flying models back-to-back on the same days using the same battery pack.</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <svg class="w-5 h-5 text-emerald-500 mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                            <span class="leading-relaxed">Flights less than 100 meters were removed to cleanse the data.</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <!-- Conclusion Section -->
+                            <div class="mt-2">
+                                <strong class="text-primary block mb-3 text-lg">Conclusion</strong>
+                                <div class="bg-white p-6 rounded-2xl border border-border shadow-sm">
+                                    <ul class="space-y-3 text-muted text-sm md:text-base">
+                                        <li class="flex items-start">
+                                            <svg class="w-5 h-5 text-accent mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                            <span class="leading-relaxed">Whale-mimetic wings significantly improve lift-to-drag ratios and overall fuel efficiency over conventional designs.</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <svg class="w-5 h-5 text-accent mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                            <span class="leading-relaxed">Integrating these biomimetic structures into commercial UAVs tangibly extends their operational flight range.</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <svg class="w-5 h-5 text-accent mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                            <span class="leading-relaxed">Increased range capabilities accelerate commercial UAV adoption, replacing high-emission delivery vehicles and reducing net greenhouse gas output.</span>
+                                        </li>
+                                        <li class="flex items-start">
+                                            <svg class="w-5 h-5 text-accent mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                                            <span class="leading-relaxed">This approach represents a highly actionable step toward mitigating the broader environmental impact of the aviation and transportation sectors.</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- Phase 2 -->
-                    <div class="p-8 md:p-12 hover:bg-black/[0.01] transition-colors">
-                        <div class="w-10 h-10 bg-gray-100 rounded-full flex items-center justify-center text-primary font-bold mb-6">2</div>
-                        <h4 class="text-xl font-bold mb-4">UAV Fabrication & Flight Test</h4>
-                        <p class="text-muted mb-6">Scaled to a 40.5-inch full wingspan and fabricated custom aircraft platforms. Programmed an onboard data logger to track telemetry during rigorous field tests at ~10 m/s.</p>
-                        <div class="bg-bg p-4 rounded-xl border border-border">
-                            <span class="block text-sm text-muted mb-1">Field Results (Distance/Volt)</span>
-                            <strong class="text-2xl text-primary">+12% Flight Range</strong>
-                            <span class="text-sm text-muted ml-2">1802 m/v vs 1596 m/v</span>
+                    <!-- Top References Section -->
+                    <div class="mt-8 pt-8 border-t border-border">
+                        <strong class="text-primary block mb-4">Top References</strong>
+                        <ul class="space-y-4 text-muted text-sm break-words">
+                            <li class="flex items-start">
+                                <svg class="w-4 h-4 text-accent mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                                <span class="leading-relaxed">"Learn about Aerodynamics." NASA Glenn Research Center, 7 Dec. 2023, <a href="https://www1.grc.nasa.gov/beginners-guide-to-aeronautics/learn-about-aerodynamics/#lift" target="_blank" class="text-accent hover:underline">www1.grc.nasa.gov/beginners-guide-to-aeronautics/learn-about-aerodynamics/#lift</a>.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-4 h-4 text-accent mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                                <span class="leading-relaxed">Celli, Vittorio. "Boundary Layer Separation and Pressure Drag." University of Virginia, 28 Sept. 1997, <a href="http://galileo.phys.virginia.edu/classes/311/notes/fluids2/node11.html" target="_blank" class="text-accent hover:underline">galileo.phys.virginia.edu/classes/311/notes/fluids2/node11.html</a>.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-4 h-4 text-accent mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                                <span class="leading-relaxed">Tucker, V. A. "Gliding Birds: Reduction of Induced Drag by Wing Tip Slots between the Primary Feathers." Journal of Experimental Biology, vol. 180, no. 1, 1993, pp. 285–310, <a href="https://journals.biologists.com/jeb/article-abstract/180/1/285/6536/Gliding-Birds-Reduction-of-Induced-Drag-by-Wing" target="_blank" class="text-accent hover:underline">journals.biologists.com/jeb/article-abstract/180/1/285/6536/Gliding-Birds-Reduction-of-Induced-Drag-by-Wing</a>.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-4 h-4 text-accent mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                                <span class="leading-relaxed">Fish, F. E., and J. M. Battle. "Hydrodynamic Design of the Humpback Whale Flipper." Journal of Morphology, vol. 225, no. 1, 1995, pp. 51–60, <a href="https://doi.org/10.1002/jmor.1052250105" target="_blank" class="text-accent hover:underline">doi.org/10.1002/jmor.1052250105</a>.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-4 h-4 text-accent mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                                <span class="leading-relaxed">Miklosovic, D. S., et al. "Leading-Edge Tubercles Delay Stall on Humpback Whale (Megaptera novaeangliae) Flippers." Physics of Fluids, vol. 16, no. 5, 2004, pp. L39–L42, <a href="https://doi.org/10.1063/1.1688341" target="_blank" class="text-accent hover:underline">doi.org/10.1063/1.1688341</a>.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <svg class="w-4 h-4 text-accent mr-3 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                                <span class="leading-relaxed">Stolaroff, J. K., et al. "Energy Use and Life Cycle Greenhouse Gas Emissions of Drones for Commercial Package Delivery." Nature Communications, vol. 9, no. 1, 2018, article no. 409, <a href="https://doi.org/10.1038/s41467-017-02411-5" target="_blank" class="text-accent hover:underline">doi.org/10.1038/s41467-017-02411-5</a>.</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Additional Independent Research Cards -->
+                    <div class="mt-12 pt-10 border-t border-border grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <!-- Published Research Paper Card -->
+                        <div class="bg-bg rounded-3xl p-6 md:p-8 border border-border shadow-sm hover:shadow-framer transition-all duration-300 flex flex-col justify-between">
+                            <div>
+                                <h4 class="text-lg font-bold text-primary mb-3">Published Research Paper</h4>
+                                <p class="text-muted text-sm leading-relaxed mb-6">Under peer-review for JEI publication.</p>
+                            </div>
+                            <div>
+                                <span class="inline-flex items-center text-xs font-mono bg-white text-primary px-3 py-1.5 rounded-lg border border-border">
+                                    DOI: 10.69831/157f400f46
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Ion vs. Chemical Propulsion Study Card -->
+                        <div class="bg-bg rounded-3xl p-6 md:p-8 border border-border shadow-sm hover:shadow-framer transition-all duration-300 flex flex-col justify-between">
+                            <div>
+                                <h4 class="text-lg font-bold text-primary mb-3">Ion vs. Chemical Propulsion Study</h4>
+                                <p class="text-muted text-sm leading-relaxed mb-4">
+                                    In Freshman year, conducted a comparative study evaluating propulsion systems in modern spacecraft. Analyzed specific limitations, thrust-to-weight ratios, and long-term deep space benefits of each methodology.
+                                </p>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            
-            <!-- Other Projects Row -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
-                <div class="bg-card rounded-3xl p-8 border border-border shadow-framer">
-                    <h4 class="text-lg font-bold mb-2">Ion vs. Chemical Propulsion Study</h4>
-                    <p class="text-muted text-sm leading-relaxed">Conducted a comparative study evaluating propulsion systems in modern spacecraft. Analyzed specific limitations, thrust-to-weight ratios, and long-term deep space benefits of each methodology.</p>
-                </div>
-                <div class="bg-card rounded-3xl p-8 border border-border shadow-framer flex items-center justify-between">
-                    <div>
-                        <h4 class="text-lg font-bold mb-1">Published Research Paper</h4>
-                        <p class="text-muted text-sm">Under peer-review for JEI publication.</p>
-                    </div>
-                    <span class="text-xs font-mono bg-gray-100 px-2 py-1 rounded border border-gray-200">DOI: 10.69831/157f400f46</span>
                 </div>
             </div>
         </section>
