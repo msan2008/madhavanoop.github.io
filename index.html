@@ -82,6 +82,7 @@
     <nav class="fixed top-6 right-6 md:right-10 glass-nav border border-border px-2 py-2 rounded-full z-50 shadow-glass flex items-center gap-1 sm:gap-2 transition-all w-max max-w-[95vw]">
         <button onclick="navigate('home')" data-target="home" class="nav-btn px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-medium transition-colors bg-black/10 text-primary">Home</button>
         <button onclick="navigate('research')" data-target="research" class="nav-btn px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-medium transition-colors hover:bg-black/5 text-muted">Research</button>
+        <button onclick="navigate('music')" data-target="music" class="nav-btn px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-medium transition-colors hover:bg-black/5 text-muted">Music</button>
         <button onclick="navigate('experience')" data-target="experience" class="nav-btn px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-medium transition-colors hover:bg-black/5 text-muted hidden sm:block">Experience</button>
         <button onclick="navigate('honors')" data-target="honors" class="nav-btn px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-medium transition-colors hover:bg-black/5 text-muted">Honors</button>
     </nav>
@@ -766,7 +767,20 @@
             </div>
         </section>
 
-        <!-- ================= PAGE 3: EXPERIENCE ================= -->
+        <!-- ================= PAGE 3: MUSIC ================= -->
+        <section id="music" class="page-section hidden">
+            <div class="mb-12">
+                <h2 class="text-4xl md:text-5xl font-bold tracking-tight text-primary mb-4">My music journey</h2>
+            </div>
+
+            <div class="bg-card rounded-[2rem] border border-border p-8 md:p-12 shadow-framer">
+                <p class="text-muted leading-relaxed text-lg">
+                    I have been taking piano lessons over 11 yrs and playing in concerts. I am currently in Level 7 out of 8 in the ABRSM levels. Participated in solo recitals at venues Kennedy Center in Washington D.C and Paramount Theaters Austin.
+                </p>
+            </div>
+        </section>
+
+        <!-- ================= PAGE 4: EXPERIENCE ================= -->
         <section id="experience" class="page-section hidden">
             <div class="mb-12">
                 <h2 class="text-4xl md:text-5xl font-bold tracking-tight text-primary mb-4">Experience & Education</h2>
@@ -922,7 +936,7 @@
         // Check the URL when the page first loads to open the correct tab
         document.addEventListener('DOMContentLoaded', () => {
             const hash = window.location.hash.substring(1);
-            const validPages = ['home', 'research', 'experience', 'honors'];
+            const validPages = ['home', 'research', 'music', 'experience', 'honors'];
             
             if (hash && validPages.includes(hash)) {
                 navigate(hash, false);
@@ -934,7 +948,7 @@
         // Handle browser back/forward buttons properly
         window.addEventListener('popstate', () => {
             const hash = window.location.hash.substring(1);
-            const validPages = ['home', 'research', 'experience', 'honors'];
+            const validPages = ['home', 'research', 'music', 'experience', 'honors'];
             
             if (hash && validPages.includes(hash)) {
                 navigate(hash, false);
