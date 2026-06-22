@@ -855,7 +855,7 @@
 
     <!-- Single Page App Routing Script -->
     <script>
-        function navigate(pageId) {
+        function navigate(pageId, updateUrl = true) {
             // 1. Hide all pages & reset animations
             const sections = document.querySelectorAll('.page-section');
             sections.forEach(sec => {
@@ -886,9 +886,38 @@
                 }
             });
 
-            // 4. Scroll smoothly to the top of the page
+            // 4. Update URL so links can be shared directly
+            if (updateUrl) {
+                history.pushState(null, null, '#' + pageId);
+            }
+
+            // 5. Scroll smoothly to the top of the page
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
+
+        // Check the URL when the page first loads to open the correct tab
+        document.addEventListener('DOMContentLoaded', () => {
+            const hash = window.location.hash.substring(1);
+            const validPages = ['home', 'research', 'experience', 'honors'];
+            
+            if (hash && validPages.includes(hash)) {
+                navigate(hash, false);
+            } else {
+                navigate('home', false); // Default to home
+            }
+        });
+
+        // Handle browser back/forward buttons properly
+        window.addEventListener('popstate', () => {
+            const hash = window.location.hash.substring(1);
+            const validPages = ['home', 'research', 'experience', 'honors'];
+            
+            if (hash && validPages.includes(hash)) {
+                navigate(hash, false);
+            } else {
+                navigate('home', false);
+            }
+        });
     </script>
 </body>
 </html>
