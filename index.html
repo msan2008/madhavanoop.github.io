@@ -187,32 +187,32 @@
                 <!-- Experience Highlight Cards -->
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                     <!-- Card 1 -->
-                    <div class="bg-card rounded-3xl p-6 md:p-8 border border-border shadow-framer hover:shadow-framer-hover transition-all duration-300 flex flex-col justify-between">
+                    <div onclick="document.getElementById('independent-research').scrollIntoView({behavior: 'smooth'})" class="bg-card rounded-3xl p-6 md:p-8 border border-border shadow-framer hover:shadow-framer-hover transition-all duration-300 flex flex-col justify-between cursor-pointer group">
                         <div>
-                            <h3 class="text-lg font-bold text-primary mb-3">Independent Research projects</h3>
+                            <h3 class="text-lg font-bold text-primary mb-3 group-hover:text-accent transition-colors">Independent Research projects</h3>
                             <p class="text-muted text-sm leading-relaxed">Conducted research for aircraft fuel efficiency improvement, paper published in JEI; named Top 12/330 at Sci Fair, securing awards and $6K scholarship</p>
                         </div>
                         <div class="mt-6 flex flex-wrap gap-2">
-                            <a href="https://doi.org/10.69831/157f400f46" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 px-3 py-1 bg-accent/10 border border-accent/20 text-accent text-[11px] font-semibold rounded-full hover:bg-accent/20 transition-colors">
+                            <a href="https://doi.org/10.69831/157f400f46" target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()" class="inline-flex items-center gap-1.5 px-3 py-1 bg-accent/10 border border-accent/20 text-accent text-[11px] font-semibold rounded-full hover:bg-accent/20 transition-colors">
                                 <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
                                 Published Research Paper
                             </a>
                         </div>
                     </div>
                     <!-- Card 2 -->
-                    <div class="bg-card rounded-3xl p-6 md:p-8 border border-border shadow-framer hover:shadow-framer-hover transition-all duration-300">
-                        <h3 class="text-lg font-bold text-primary mb-3">Independent Capstone project</h3>
+                    <div onclick="document.getElementById('independent-capstone').scrollIntoView({behavior: 'smooth'})" class="bg-card rounded-3xl p-6 md:p-8 border border-border shadow-framer hover:shadow-framer-hover transition-all duration-300 cursor-pointer group">
+                        <h3 class="text-lg font-bold text-primary mb-3 group-hover:text-accent transition-colors">Independent Capstone project</h3>
                         <p class="text-muted text-sm leading-relaxed">Developed an open-source predictive aerodynamics software toolkit for aircraft wing efficiency, replacing costly hardware and simulation software; hosted workshops for XX users; refined via community feedback</p>
                     </div>
                     <!-- Card 3 -->
-                    <div class="bg-card rounded-3xl p-6 md:p-8 border border-border shadow-framer hover:shadow-framer-hover transition-all duration-300">
-                        <h3 class="text-lg font-bold text-primary mb-3">UT Austin Research Assistant</h3>
+                    <div onclick="document.getElementById('ut-austin-research').scrollIntoView({behavior: 'smooth'})" class="bg-card rounded-3xl p-6 md:p-8 border border-border shadow-framer hover:shadow-framer-hover transition-all duration-300 cursor-pointer group">
+                        <h3 class="text-lg font-bold text-primary mb-3 group-hover:text-accent transition-colors">UT Austin Research Assistant</h3>
                         <p class="text-muted text-sm leading-relaxed">Assisted UT Austin Professor at the Vertical Flight Lab on the research project for the US Dept of Navy; conducted testing for drone sensors</p>
                     </div>
                 </div>
             </div>
 
-            <div class="bg-card rounded-[2rem] border border-border overflow-hidden shadow-framer">
+            <div id="independent-research" class="bg-card rounded-[2rem] border border-border overflow-hidden shadow-framer scroll-mt-28">
                 <div class="p-8 md:p-12 border-b border-border">
                     <p class="text-accent font-semibold tracking-wider text-2xl uppercase mb-2">Independent Research</p>
                     <h3 class="text-3xl md:text-4xl font-bold tracking-tight mb-6">Prototyping & Flight-Testing Biomimetic Wings to Optimize Aerodynamic Efficiency</h3>
@@ -527,7 +527,7 @@
                                         <!-- Diagram 1 -->
                                         <div class="flex flex-col gap-2">
                                             <div class="w-full rounded-2xl overflow-hidden border border-border shadow-sm group bg-white flex items-center justify-center">
-                                                <img src="wing.png" alt="Commercial Drone Diagram" class="w-full h-full object-contain aspect-video p-2 group-hover:scale-105 transition-transform duration-500">
+                                                <img src="Wing.png" alt="Commercial Drone Diagram" class="w-full h-full object-contain aspect-video p-2 group-hover:scale-105 transition-transform duration-500">
                                             </div>
                                             <span class="text-[10px] text-muted text-center w-full block">Image credit: wing.com</span>
                                         </div>
@@ -676,7 +676,7 @@
             </div>
 
             <!-- Independent Capstone Project Section -->
-            <div class="bg-card rounded-[2rem] border border-border overflow-hidden shadow-framer mt-12">
+            <div id="independent-capstone" class="bg-card rounded-[2rem] border border-border overflow-hidden shadow-framer mt-12 scroll-mt-28">
                 <div class="p-8 md:p-12">
                     <p class="text-accent font-semibold tracking-wider text-2xl uppercase mb-2">Independent Capstone project</p>
                     <h3 class="text-3xl md:text-4xl font-bold tracking-tight mb-6">Open-source Aerodynamic Screening and Educational Toolkit</h3>
@@ -708,7 +708,7 @@
             </div>
 
             <!-- UT Austin Research Assistant Section -->
-            <div class="bg-card rounded-[2rem] border border-border overflow-hidden shadow-framer mt-12">
+            <div id="ut-austin-research" class="bg-card rounded-[2rem] border border-border overflow-hidden shadow-framer mt-12 scroll-mt-28">
                 <div class="p-8 md:p-12">
                     <p class="text-accent font-semibold tracking-wider text-2xl uppercase mb-2">Research Assistant</p>
                     <h3 class="text-3xl md:text-4xl font-bold tracking-tight mb-6">UT Austin research project for the US Dept of Navy</h3>
