@@ -82,6 +82,7 @@
     <nav class="fixed top-6 right-6 md:right-10 glass-nav border border-border px-2 py-2 rounded-full z-50 shadow-glass flex items-center gap-1 sm:gap-2 transition-all w-max max-w-[95vw]">
         <button onclick="navigate('home')" data-target="home" class="nav-btn px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-medium transition-colors bg-black/10 text-primary">Home</button>
         <button onclick="navigate('research')" data-target="research" class="nav-btn px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-medium transition-colors hover:bg-black/5 text-muted">Research</button>
+        <button onclick="navigate('aerospace')" data-target="aerospace" class="nav-btn px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-medium transition-colors hover:bg-black/5 text-muted">Aerospace</button>
         <button onclick="navigate('music')" data-target="music" class="nav-btn px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-medium transition-colors hover:bg-black/5 text-muted">Music</button>
         <button onclick="navigate('experience')" data-target="experience" class="nav-btn px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-medium transition-colors hover:bg-black/5 text-muted hidden sm:block">Experience</button>
         <button onclick="navigate('honors')" data-target="honors" class="nav-btn px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-medium transition-colors hover:bg-black/5 text-muted">Honors</button>
@@ -767,7 +768,95 @@
             </div>
         </section>
 
-        <!-- ================= PAGE 3: MUSIC ================= -->
+        <!-- ================= PAGE 3: AEROSPACE (NEW) ================= -->
+        <section id="aerospace" class="page-section hidden">
+            <div class="mb-12">
+                <h2 class="text-4xl md:text-5xl font-bold tracking-tight text-primary mb-4">My Aerospace Journey</h2>
+                <p class="text-lg text-muted max-w-2xl">From childhood wonder to real-world engineering.</p>
+            </div>
+
+            <div class="bg-card rounded-[2rem] border border-border p-6 md:p-12 shadow-framer space-y-16">
+
+                <!-- Block 1: The Spark -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+                    <div class="space-y-4 order-2 lg:order-1">
+                        <p class="text-muted leading-relaxed text-lg">
+                            That night, the moon wasn’t the bright white I knew it to be; it was blood-red, and I had to know why. As a kindergartner, I couldn’t grasp how something in the sky could change so drastically overnight. When I learned about the mechanics of a lunar eclipse the next day, it felt like a door had unlocked.
+                        </p>
+                        <p class="text-muted leading-relaxed text-lg">
+                            Realizing there was an entire universe past our planet waiting to be understood changed everything for me. Ever since, I’ve been completely hooked on the mysteries of space.
+                        </p>
+                    </div>
+                    <div class="grid grid-cols-2 gap-3 order-1 lg:order-2">
+                        <div class="col-span-2 rounded-xl overflow-hidden border border-border shadow-sm group bg-bg aspect-video relative">
+                            <img src="Redmoon.jpg" alt="Blood Red Moon" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="rounded-xl overflow-hidden border border-border shadow-sm group bg-bg aspect-square relative">
+                            <img src="stargazing-at-age6.jpg" alt="Stargazing at age 6" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="rounded-xl overflow-hidden border border-border shadow-sm group bg-bg aspect-square relative">
+                            <img src="austronaut-at-age6.jpg" alt="Astronaut costume at age 6" class="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="rounded-xl overflow-hidden border border-border shadow-sm group bg-bg aspect-square relative">
+                            <img src="Rocket-building-at-age6.jpg" alt="Building rockets at age 6" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="rounded-xl overflow-hidden border border-border shadow-sm group bg-bg aspect-square relative">
+                            <img src="Launch-reentry-at-age7.jpg" alt="Simulated launch and reentry at age 7" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Divider -->
+                <div class="w-full h-px bg-border/50"></div>
+
+                <!-- Block 2: Problem Solving & Camps -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+                    <div class="grid grid-cols-2 gap-3">
+                        <div class="col-span-2 rounded-xl overflow-hidden border border-border shadow-sm group bg-bg aspect-video relative">
+                            <img src="Spacecamp-huntsville-at-age15.jpg" alt="Space Camp Huntsville at age 15" class="w-full h-full object-cover object-center hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="rounded-xl overflow-hidden border border-border shadow-sm group bg-bg aspect-square relative">
+                            <img src="NASA-camp-at-age10.jpg" alt="NASA summer camp at age 10" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                        </div>
+                        <div class="rounded-xl overflow-hidden border border-border shadow-sm group bg-bg aspect-square relative">
+                            <img src="NASA-Camp-Rockets-at-age10.jpg" alt="Building rockets at NASA camp" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                        </div>
+                    </div>
+                    <div class="space-y-4">
+                        <p class="text-muted leading-relaxed text-lg">
+                            As I grew older, that passive wonder evolved into a desire to actually solve problems. This shift started at a NASA summer camp where I found myself designing simulated lunar bases and programming rovers. I loved it so much that I later returned as an assistant counselor to help spark that same excitement in younger kids.
+                        </p>
+                        <p class="text-muted leading-relaxed text-lg">
+                            Years later, I found myself standing as the flight director in a Space Shuttle simulator at the U.S. Space & Rocket Center. Staring at my monitor during a high-stakes scenario, I blurted out, “Whoa! Why are the payload bay doors closed?” Ordering CAPCOM to open them was a split-second decision that averted a simulated collision. Guiding my ten-person mission control team through those frantic moments left me with a clear, concrete ambition: one day, I want to help guide humanity’s real steps onto Mars.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Divider -->
+                <div class="w-full h-px bg-border/50"></div>
+
+                <!-- Block 3: Engineering the Future -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
+                    <div class="space-y-6 text-muted leading-relaxed text-lg">
+                        <p>
+                            I’m drawn to aerospace engineering because it does two things at once: it pushes the absolute limits of human endurance, and it creates a trickle-down effect of everyday innovations on Earth. But I also know that getting there requires solving massive hurdles first—like the immense weight and cost of fuel needed to break gravity compared to the relatively weak thrust of current chemical engines. Later, inspired by how effortlessly marine life moves through water, I taught myself 3D modeling and Computational Fluid Dynamics (CFD) to explore biomimicry in flight. I designed aircraft wings modeled after the unique tubercles of a humpback whale and built a prototype remote-controlled plane to test the geometry in the real world. Seeing a 12% improvement in flight range was an incredible feeling—proof that looking to nature could dramatically cut drag and improve fuel efficiency.
+                        </p>
+                        <p>
+                            Lately, I've been eager to push my boundaries even further. I currently assist a professor at the University of Texas at Austin's aerospace department on a project for the U.S. Department of the Navy, which has been an incredible opportunity to learn advanced aerodynamics directly from experts. Balancing my time in the lab with my high school aerospace coursework and NASA’s High School Aerospace Scholars program has been a whirlwind, but it’s continually grounding my technical foundation in real-world engineering.
+                        </p>
+                        <p>
+                            Aerospace engineering has this amazing capacity to redefine what is humanly possible. I look forward to entering college to figure out my exact specialization, collaborate with peers who are just as obsessed with flight as I am, and dive into original research. Driven by the very same curiosity I felt as a kid looking up at a red moon, I'm ready to dedicate my college years to solving the complexities of spaceflight and helping make life beyond our planet a reality.
+                        </p>
+                    </div>
+                    <div class="rounded-xl overflow-hidden border border-border shadow-sm group bg-bg sticky top-24">
+                        <img src="Phase2-drone.jpg" alt="Phase 2 biomimetic drone flight testing" class="w-full h-auto object-cover hover:scale-105 transition-transform duration-500">
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ================= PAGE 4: MUSIC ================= -->
         <section id="music" class="page-section hidden">
             <div class="mb-12">
                 <h2 class="text-4xl md:text-5xl font-bold tracking-tight text-primary mb-4">My music journey</h2>
@@ -1089,7 +1178,7 @@
         // Check the URL when the page first loads to open the correct tab
         document.addEventListener('DOMContentLoaded', () => {
             const hash = window.location.hash.substring(1);
-            const validPages = ['home', 'research', 'music', 'experience', 'honors'];
+            const validPages = ['home', 'research', 'aerospace', 'music', 'experience', 'honors'];
             
             if (hash && validPages.includes(hash)) {
                 navigate(hash, false);
@@ -1101,7 +1190,7 @@
         // Handle browser back/forward buttons properly
         window.addEventListener('popstate', () => {
             const hash = window.location.hash.substring(1);
-            const validPages = ['home', 'research', 'music', 'experience', 'honors'];
+            const validPages = ['home', 'research', 'aerospace', 'music', 'experience', 'honors'];
             
             if (hash && validPages.includes(hash)) {
                 navigate(hash, false);
