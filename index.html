@@ -161,8 +161,8 @@
                     </div>
                 </div>
 
-                <!-- Highlight 4: NASA (Routes to Experience Page) -->
-                <a href="#" onclick="navigate('experience'); return false;" class="group bg-card rounded-[1.5rem] p-6 border border-border shadow-framer hover:shadow-framer-hover hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between relative overflow-hidden">
+                <!-- Highlight 4: NASA (Routes to Aerospace Page) -->
+                <a href="#" onclick="navigate('aerospace'); setTimeout(() => document.getElementById('nasa-moonshot').scrollIntoView({behavior: 'smooth'}), 50); return false;" class="group bg-card rounded-[1.5rem] p-6 border border-border shadow-framer hover:shadow-framer-hover hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between relative overflow-hidden">
                     <div class="absolute right-0 bottom-0 opacity-[0.03] text-primary pointer-events-none">
                         <svg width="150" height="150" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
                     </div>
@@ -830,6 +830,18 @@
                             Years later, I found myself standing as the flight director in a Space Shuttle simulator at the U.S. Space & Rocket Center. Staring at my monitor during a high-stakes scenario, I blurted out, “Whoa! Why are the payload bay doors closed?” Ordering CAPCOM to open them was a split-second decision that averted a simulated collision. Guiding my ten-person mission control team through those frantic moments left me with a clear, concrete ambition: one day, I want to help guide humanity’s real steps onto Mars.
                         </p>
                     </div>
+                </div>
+
+                <!-- Divider -->
+                <div class="w-full h-px bg-border/50"></div>
+
+                <!-- Block 2.5: NASA Moonshot Team Lead -->
+                <div id="nasa-moonshot" class="bg-bg rounded-2xl p-8 border border-border shadow-sm scroll-mt-28">
+                    <p class="text-accent font-semibold tracking-wider text-xs uppercase mb-2">High School Aerospace Scholars (NASA)</p>
+                    <h3 class="text-2xl md:text-3xl font-bold text-primary mb-4">NASA Moonshot Team Lead</h3>
+                    <p class="text-muted leading-relaxed text-lg mb-0">
+                        Selected for a rigorous year-long NASA program. Led the Echo team to design a comprehensive human mission architecture to the Moon, presenting directly to a panel of NASA engineers.
+                    </p>
                 </div>
 
                 <!-- Divider -->
