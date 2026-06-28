@@ -144,7 +144,7 @@
                 </a>
 
                 <!-- Highlight 2: DI -->
-                <div class="group bg-card rounded-[1.5rem] p-6 border border-border shadow-framer hover:shadow-framer-hover hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between">
+                <a href="#" onclick="navigate('engineering'); setTimeout(() => document.getElementById('destination-imagination').scrollIntoView({behavior: 'smooth'}), 50); return false;" class="group bg-card rounded-[1.5rem] p-6 border border-border shadow-framer hover:shadow-framer-hover hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between relative overflow-hidden">
                     <div>
                         <div class="w-10 h-10 bg-purple-100 text-purple-600 rounded-xl flex items-center justify-center mb-4">
                             <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg>
@@ -159,7 +159,7 @@
                         <span class="px-2.5 py-1 bg-amber-50 border border-amber-200 text-amber-700 text-[10px] font-bold rounded-full">DaVinci Award</span>
                         <span class="px-2.5 py-1 bg-amber-50 border border-amber-200 text-amber-700 text-[10px] font-bold rounded-full">Renaissance Award</span>
                     </div>
-                </div>
+                </a>
 
                 <!-- Highlight 4: NASA (Routes to Aerospace Page) -->
                 <a href="#" onclick="navigate('aerospace'); return false;" class="group bg-card rounded-[1.5rem] p-6 border border-border shadow-framer hover:shadow-framer-hover hover:-translate-y-1 transition-all duration-300 flex flex-col justify-between relative overflow-hidden">
@@ -766,6 +766,99 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Destination Imagination Section -->
+            <div id="destination-imagination" class="bg-card rounded-[2rem] border border-border overflow-hidden shadow-framer mt-12 scroll-mt-28">
+                <div class="p-8 md:p-12">
+                    <p class="text-accent font-semibold tracking-wider text-2xl uppercase mb-2">Destination Imagination</p>
+                    <h3 class="text-3xl md:text-4xl font-bold tracking-tight mb-12">Combining Engineering, Art, and Teamwork on a Global Stage</h3>
+
+                    <!-- Block 1: The Ascent of the Thought-Tree -->
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center mb-12">
+                        <div class="space-y-4">
+                            <h4 class="text-2xl font-bold text-primary mb-2">The Ascent of the Thought-Tree</h4>
+                            <p class="text-muted leading-relaxed text-sm md:text-base">
+                                A huge sigh of relief washed over me as our colorful "thought-tree" finally rose into the air. As it reached the peak of its ascent, the circular leaves—embedded with custom LED strips—automatically lit up the room in a rainbow of colors. Attached to each leaf was a tag representing a core value of humanity: creativity, honesty, bravery, and kindness. While most teams at the competition built standard jigsaw puzzles, my team decided to build a "growing puzzle tree". We wanted the different branches to represent life abstracts, turning our project into a "tree of humanity".
+                            </p>
+                        </div>
+                        <div class="grid grid-cols-2 gap-3">
+                            <div class="rounded-xl overflow-hidden border border-border shadow-sm group bg-bg aspect-square relative">
+                                <img src="DI-thought-tree.jpg" alt="The Thought Tree" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                            </div>
+                            <div class="rounded-xl overflow-hidden border border-border shadow-sm group bg-bg aspect-square relative">
+                                <img src="DI-Thought-tree-circuit.jpg" alt="Thought Tree Circuitry" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Divider -->
+                    <div class="w-full h-px bg-border/50 mb-12"></div>
+
+                    <!-- Block 2: Engineering Behind the Art -->
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center mb-12">
+                        <div class="grid grid-cols-2 gap-3 order-2 lg:order-1">
+                            <div class="col-span-2 rounded-xl overflow-hidden border border-border shadow-sm group bg-bg aspect-video relative">
+                                <img src="DI-Beanbag-launcher.jpg" alt="Beanbag Launcher Mechanism" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                            </div>
+                            <div class="rounded-xl overflow-hidden border border-border shadow-sm group bg-bg aspect-square relative">
+                                <img src="DI-Middleschool-Skit.jpg" alt="Middle School Skit" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                            </div>
+                            <div class="rounded-xl overflow-hidden border border-border shadow-sm group bg-bg aspect-square relative">
+                                <img src="DI-Highschool-Skit.jpg" alt="High School Skit" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                            </div>
+                        </div>
+                        <div class="space-y-4 order-1 lg:order-2">
+                            <h4 class="text-2xl font-bold text-primary mb-2">Engineering Behind the Art</h4>
+                            <p class="text-muted leading-relaxed text-sm md:text-base">
+                                This was all part of Destination Imagination (DI), a STEAM competition where teams are given a massive challenge and have to use a mix of STEM, fine arts, and teamwork to build a solution and present it through a live skit. That year, our task was to build a puzzle solver robot that could solve a chosen puzzle using technical methods. I co-led the design and development of the technical side, working alongside friends who were just as obsessed with engineering and science as I was.
+                            </p>
+                            <p class="text-muted leading-relaxed text-sm md:text-base">
+                                Bringing our story to life meant dividing up the work based on what we were good at, from writing the script to building the actual props. One of my friends was amazing at electrical engineering and circuitry, while another was a woodworking expert. Even though I was a key player in the overall technical build, I had my own learning curves. We pooled our engineering skills and worked as a tight unit to design and calibrate a custom thrower mechanism. Our main goal was consistency, which meant analyzing launch angles and spring tension until the device worked like clockwork. After hours of fine-tuning the math and hardware, we got the launcher to a point where it could reliably and accurately fire a single beanbag right into a target zone between 280 and 300 centimeters away.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Divider -->
+                    <div class="w-full h-px bg-border/50 mb-12"></div>
+
+                    <!-- Block 3: A Global Triumph -->
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+                        <div class="space-y-4">
+                            <h4 class="text-2xl font-bold text-primary mb-2">A Global Triumph</h4>
+                            <p class="text-muted leading-relaxed text-sm md:text-base">
+                                Watching our masterpiece actually work and amaze the audience and judges made me smile, knowing that months of research, trial-and-error, and pure determination were going to pay off. The teamwork skills I built during that DI season have been invaluable ever since, whether I'm working on a regular group project at school or collaborating with PhD students at the UT Austin aerospace lab.
+                            </p>
+                            <p class="text-muted leading-relaxed text-sm md:text-base">
+                                Our team went on to be incredibly successful, ultimately winning the first-place trophy at the global competition twice—once in the middle school division and again in high school. Along the way, we were honored with both the DaVinci Award and the Renaissance Award, special recognitions reserved for teams that display exceptionally unique solutions, courageous risk-taking, and outstanding creativity. Standing on top of a global stage that featured over 600 teams from 13 different countries was completely exhilarating. It wasn't just because we successfully combined art and engineering, but because we failed, learned, and succeeded together as close friends.
+                            </p>
+                            
+                            <div class="mt-6 flex flex-wrap gap-2">
+                                <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-amber-50 border border-amber-200 text-amber-700 text-xs font-semibold rounded-full">
+                                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg>
+                                    2x Global 1st Place
+                                </span>
+                                <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-amber-50 border border-amber-200 text-amber-700 text-xs font-semibold rounded-full">
+                                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path></svg>
+                                    DaVinci Award
+                                </span>
+                                <span class="inline-flex items-center gap-1.5 px-3 py-1 bg-amber-50 border border-amber-200 text-amber-700 text-xs font-semibold rounded-full">
+                                    <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"></path></svg>
+                                    Renaissance Award
+                                </span>
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-2 gap-3">
+                            <div class="rounded-xl overflow-hidden border border-border shadow-sm group bg-bg aspect-square relative">
+                                <img src="DI-MiddleSchool-firstplace.jpeg" alt="Middle School 1st Place" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                            </div>
+                            <div class="rounded-xl overflow-hidden border border-border shadow-sm group bg-bg aspect-square relative">
+                                <img src="DI-HighSchool-Firstplace.jpg" alt="High School 1st Place" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </section>
 
         <!-- ================= PAGE 3: AEROSPACE (NEW) ================= -->
