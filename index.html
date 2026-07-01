@@ -245,7 +245,7 @@
                     
                     <!-- Project Snapshot Section -->
                     <div class="p-6 md:p-8 bg-bg rounded-2xl border border-border">
-                        <strong class="text-primary block mb-3 text-lg">Project Snapshot</strong>
+                        <strong class="text-primary block mb-3 text-lg">Project Abstract</strong>
                         <p class="text-muted leading-relaxed text-sm md:text-base mb-6">
                             With air travel emitting one billion tons of CO2 annually and transportation contributing ~28% of global emissions, developing efficient wing designs to reduce drag is critical for mitigating global warming. This two-phase study evaluated biomimetic wings inspired by eagles and humpback whales. In Phase 1, Computational Fluid Dynamics (CFD) and wind-tunnel testing on 10-inch half-wing models revealed that the whale-mimetic design improved the lift-to-drag ratio by up to 47% at a 5-degree angle of attack and 50 m/s airspeed; the eagle-inspired design showed inconsistent performance. Phase 2 scaled the whale-mimetic design to a 40.5-inch full-wing model. CFD simulations at 10 m/s and a 5-degree angle of attack showed a 12.2% improvement in the lift-to-drag ratio. Subsequent flight testing of a drone prototype demonstrated a 12% increase in flight distance per volt compared to conventional wings. These results suggest that whale-mimetic wings significantly enhance fuel efficiency and represent a promising advancement in reducing the environmental impact of aviation.
                         </p>
@@ -709,7 +709,7 @@
                     
                     <!-- Project Snapshot Section -->
                     <div class="p-6 md:p-8 bg-bg rounded-2xl border border-border">
-                        <strong class="text-primary block mb-3 text-lg">Project Snapshot</strong>
+                        <strong class="text-primary block mb-3 text-lg">Project Abstract</strong>
                         <p class="text-muted leading-relaxed text-sm md:text-base mb-6">
                             Built a community-facing open-source aerodynamics toolkit centered on a lightweight predictive machine learning software tool to help robotics teams/makerspaces/beginner engineering groups/Students explore aerodynamic behavior in a matter of seconds without needing expensive software or specialized hardware. This toolkit will make the aerofoil wing design iterations faster, cheaper and highly accessible to the aerospace community.
                         </p>
@@ -741,7 +741,7 @@
                     
                     <!-- Project Snapshot Section -->
                     <div class="p-6 md:p-8 bg-bg rounded-2xl border border-border">
-                        <strong class="text-primary block mb-3 text-lg">Project Snapshot</strong>
+                        <strong class="text-primary block mb-3 text-lg">Project Abstract</strong>
                         <p class="text-muted leading-relaxed text-sm md:text-base mb-0">
                             Build a special purpose drone for US Dept of Navy to enable ship inspection. The special requirements include extended range, ability to semi-auto navigate tight quarters.
                         </p>
@@ -886,7 +886,7 @@
                     <div class="space-y-4 order-2 lg:order-1">
                         <h3 class="text-2xl md:text-3xl font-bold text-primary mb-2">The Spark</h3>
                         <p class="text-muted leading-relaxed text-lg">
-                            That night, the moon wasn’t the bright white I knew it to be; it was blood-red, and I had to know why. As a kindergartner, I couldn’t grasp how something in the sky could change so drastically overnight. When I learned about the mechanics of a lunar eclipse the next day, it felt like a door had unlocked.
+                            In April 2014, I watched a lunar eclipse. As a kindergartner, was incredibly confused on how the Moon could suddenly turn from white to dark red back to white, so quickly.  When I learned about the mechanics of a lunar eclipse the next day, it felt like a door had unlocked.
                         </p>
                         <p class="text-muted leading-relaxed text-lg">
                             Realizing there was an entire universe past our planet waiting to be understood changed everything for me. Ever since, I’ve been completely hooked on the mysteries of space.
@@ -930,10 +930,10 @@
                     <div class="space-y-4">
                         <h3 class="text-2xl md:text-3xl font-bold text-primary mb-2">Problem Solving & Space Camps</h3>
                         <p class="text-muted leading-relaxed text-lg">
-                            As I grew older, that passive wonder evolved into a desire to actually solve problems. This shift started at a NASA summer camp where I found myself designing simulated lunar bases and programming rovers. I loved it so much that I later returned as an assistant counselor to help spark that same excitement in younger kids.
+                            As I grew older, that passive wonder evolved into a desire to actually solve problems. This shift started at a NASA summer camp in Houston where I found myself designing simulated lunar bases and programming rovers. I loved it so much that I later returned as an assistant counselor to help spark that same excitement in younger kids.
                         </p>
                         <p class="text-muted leading-relaxed text-lg">
-                            Years later, I found myself standing as the flight director in a Space Shuttle simulator at the U.S. Space & Rocket Center. Staring at my monitor during a high-stakes scenario, I blurted out, “Whoa! Why are the payload bay doors closed?” Ordering CAPCOM to open them was a split-second decision that averted a simulated collision. Guiding my ten-person mission control team through those frantic moments left me with a clear, concrete ambition: one day, I want to help guide humanity’s real steps onto Mars.
+                            Years later, I found myself standing as the flight director in a Space Shuttle simulator at the U.S. Space & Rocket Center. Every few minutes, the game masters would throw our team some problem - power systems failing on the ISS, a medical emergency onboard the Space Shuttle, etc. Guiding my ten-person mission control team through those problems left me with a clear, concrete ambition: one day, I want to help lead a mission to set humanity’s first steps onto Mars
                         </p>
                     </div>
                 </div>
@@ -1283,6 +1283,16 @@
             });
 
             // 2. Show the target page
+            const pageBackgrounds = {
+                home: '#F7F7F7',
+                engineering: '#FEE2E2',   // light red
+                aerospace: '#DCFCE7',     // light green
+                music: '#FEF9C3',         // light yellow
+                experience: '#E0F2FE',    // sky blue
+                honors: '#FFEDD5'         // light orange
+            };
+            document.body.style.backgroundColor = pageBackgrounds[pageId] || '#F7F7F7';
+
             const targetPage = document.getElementById(pageId);
             if (targetPage) {
                 targetPage.classList.remove('hidden');
